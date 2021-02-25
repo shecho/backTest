@@ -1,5 +1,9 @@
-import express from 'express';
+import express from "express";
+import config from "./server/config";
 
-const app = express();
-app.listen(4000);
-console.log("Server on port", 4000);
+// const config = require("./server/config");
+
+const app = config(express());
+app.listen(app.get(`port`), () => {
+  console.log(`Conected on port: http://localhost:${app.get("port")}/`);
+});
