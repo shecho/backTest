@@ -1,8 +1,8 @@
 
 import express, { json } from "express";
-import path from "path";
+// import path from "path";
 import morgan from "morgan";
-// import routes from 'Routes'
+import routes from '../routes'
 
 // const routes = require("../routes/index");
 
@@ -15,7 +15,7 @@ const config = (app) => {
   // Static files
 
   // Routes from /routes index
-//   routes(app);
+  routes(app);
   return app;
 
   // Error router
