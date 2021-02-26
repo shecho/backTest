@@ -1,14 +1,10 @@
 import { Router } from "express";
-
+import Home from '../controllers/homeController';
 const router = Router();
 
 
 module.exports = (app) => {
-    app.get("/testing", (req, res) => {
-        res.json({
-          message: "hola frontend en react",
-        });
-      });
+    app.get("/", Home.wellcome);
 
       app.use(router);
 }
